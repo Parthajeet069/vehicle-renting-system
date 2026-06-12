@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Booking Successful</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <div class="navbar">
+
+        <div class="logo">
+            Parth Garage
+        </div>
+
+        <div class="nav-links">
+
+            <a href="/">Home</a>
+
+            <a href="/#about">About Us</a>
+
+            <a href="/#services">Services</a>
+
+            <a href="/#contact">Contact</a>
+
+        </div>
+
+    </div>
+
+    <!-- SUCCESS BOX -->
+
+    <div class="success-page">
+
+        <div class="success-box">
+
+            <div class="success-icon">
+                ✓
+            </div>
+
+            <h1>Booking Confirmed!</h1>
+
+            <p class="success-text">
+                Your vehicle has been rented successfully.
+            </p>
+
+<div class="booking-details">
+
+    <div class="detail-row">
+        <span>Vehicle Name</span>
+        <span>{{ vehicle_name }}</span>
+    </div>
+
+    <div class="detail-row">
+        <span>Vehicle Type</span>
+        <span>{{ vehicle_type }}</span>
+    </div>
+
+    <div class="detail-row">
+        <span>Rental Days</span>
+        <span>{{ days }} Days</span>
+    </div>
+
+    <div class="detail-row">
+        <span>Amount Paid</span>
+        <span>₹{{ total_amount }}</span>
+    </div>
+
+</div>
+
+            <div class="support-box">
+
+                <h3>Need Help?</h3>
+
+                <p>
+                    Contact Us: +91 9876543210
+                </p>
+
+                <p>
+                    Email: parthgarage@gmail.com
+                </p>
+
+            </div>
+
+            <a href="/">
+                <button class="home-btn">
+                    Back To Home
+                </button>
+            </a>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ selected_category }}</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+<div class="navbar">
+
+    <div class="logo">
+        Parth Garage
+    </div>
+
+    <div class="nav-links">
+
+        <a href="/">Home</a>
+
+        <!-- VEHICLES DROPDOWN -->
+
+       <div class="dropdown">
+
+           <button class="dropbtn">Vehicles</button>
+
+            <div class="dropdown-content">
+
+                <a href="/category/SUV">SUV</a>
+
+                <a href="/category/Sedan">Sedan</a>
+
+                <a href="/category/Bike">Bike</a>
+
+                <a href="/category/Scooty">Scooty</a>
+
+                <a href="/category/Luxury Cars">Luxury Cars</a>
+
+            </div>
+
+        </div>
+
+        <a href="/#about">About Us</a>
+
+        <a href="/#services">Services</a>
+
+        <a href="/#contact">Contact</a>
+
+    </div>
+
+<div class="login-btn">
+
+    {% if username %}
+
+        <span class="welcome-user">
+            Welcome, {{ username }}
+        </span>
+
+        <a href="/logout">
+            <button>Logout</button>
+        </a>
+
+    {% else %}
+
+        <a href="/login">
+            <button>Login / Sign Up</button>
+        </a>
+
+    {% endif %}
+
+</div>
+
+</div>
+
+
+    <!-- TITLE -->
+
+    <div class="vehicle-section">
+
+        <h1>{{ selected_category }} Vehicles</h1>
+
+        <div class="vehicle-container">
+
+            {% for vehicle in vehicles %}
+
+            <div class="vehicle-card">
+
+                <img src="{{ vehicle.image }}"
+                     class="vehicle-real-image">
+
+                <h2>{{ vehicle.name }}</h2>
+
+                <p>₹{{ vehicle.price }} / day</p>
+
+                <a href="/rent/{{ vehicle.name }}">
+                    <button>Rent Now</button>
+                </a>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</body>
+</html>

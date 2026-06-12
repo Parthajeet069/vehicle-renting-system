@@ -1,0 +1,740 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial;
+}
+
+body{
+    background:#f5f5f5;
+}
+
+/* NAVBAR */
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 50px;
+    background:white;
+    border-bottom:1px solid #ddd;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:32px;
+    font-weight:bold;
+}
+
+.nav-links{
+    display:flex;
+    gap:35px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:black;
+    font-size:18px;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:#007bff;
+    transform:translateY(-3px);
+}
+
+.login-btn button{
+    background:#000814;
+    color:white;
+    border:none;
+    padding:12px 22px;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+/* TITLE */
+
+.main-title{
+    text-align:center;
+    margin-top:60px;
+}
+
+.main-title h1{
+    font-size:55px;
+    margin-bottom:15px;
+}
+
+.main-title p{
+    font-size:22px;
+    color:#666;
+}
+
+/* CATEGORY SECTION */
+
+.category-menu{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:40px;
+    padding:60px;
+}
+
+.category-box{
+    width:350px;
+    background:white;
+    border-radius:12px;
+    padding:25px;
+    text-align:center;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.category-box:hover{
+    transform:translateY(-10px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+.category-box h2{
+    font-size:34px;
+    margin-bottom:20px;
+}
+
+.category-image{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:10px;
+    margin-bottom:25px;
+}
+
+.category-box button{
+    background:#000814;
+    color:white;
+    border:none;
+    padding:14px 28px;
+    border-radius:6px;
+    font-size:18px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.category-box button:hover{
+    transform:scale(1.05);
+}
+
+/* VEHICLE PAGE */
+
+.vehicle-section{
+    padding:60px;
+}
+
+.vehicle-section h1{
+    text-align:center;
+    font-size:50px;
+    margin-bottom:40px;
+}
+
+.vehicle-container{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:30px;
+}
+
+.vehicle-card{
+    width:300px;
+    background:white;
+    border-radius:12px;
+    padding:20px;
+    text-align:center;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.vehicle-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+.vehicle-real-image{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    border-radius:10px;
+    margin-bottom:20px;
+}
+
+.vehicle-card h2{
+    margin-bottom:10px;
+}
+
+.vehicle-card p{
+    font-size:20px;
+    margin-bottom:15px;
+}
+
+.vehicle-card button{
+    width:100%;
+    background:#000814;
+    color:white;
+    border:none;
+    padding:14px;
+    border-radius:6px;
+    font-size:17px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.vehicle-card button:hover{
+    transform:scale(1.05);
+}
+
+/* ABOUT / SERVICES / CONTACT */
+
+.info-section{
+    padding:80px 60px;
+    text-align:center;
+}
+
+.info-section h1{
+    font-size:50px;
+    margin-bottom:25px;
+}
+
+.info-section p{
+    font-size:20px;
+    color:#555;
+    line-height:1.8;
+    max-width:900px;
+    margin:auto;
+}
+
+.services-container{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:30px;
+    margin-top:50px;
+}
+
+.service-card{
+    width:300px;
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.service-card:hover{
+    transform:translateY(-10px);
+}
+
+.service-card h2{
+    margin-bottom:15px;
+}
+
+.contact-box{
+    margin-top:30px;
+}
+
+.contact-box p{
+    margin-bottom:15px;
+    font-size:22px;
+}
+
+/* FOOTER */
+
+.footer{
+    background:#000814;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    padding:25px 50px;
+    margin-top:60px;
+}
+
+/* DROPDOWN */
+
+.dropdown{
+    position:relative;
+    display:inline-block;
+}
+
+.dropbtn{
+    background:none;
+    border:none;
+    font-size:20px;
+    cursor:pointer;
+    color:black;
+    transition:0.3s;
+}
+
+.dropbtn:hover{
+    color:#007bff;
+}
+
+/* DROPDOWN MENU */
+
+.dropdown-content{
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    background:white;
+    min-width:200px;
+    border-radius:10px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.2);
+    overflow:hidden;
+    z-index:1000;
+    padding:8px 0;
+}
+
+/* KEEP MENU OPEN */
+
+.dropdown:hover .dropdown-content{
+    display:block;
+}
+
+/* LINKS */
+
+.dropdown-content a{
+    display:block;
+    padding:14px 20px;
+    text-decoration:none;
+    color:black;
+    font-size:18px;
+    transition:0.3s;
+}
+
+.dropdown-content a:hover{
+    background:#007bff;
+    color:white;
+}
+
+/* HERO BANNER */
+
+.hero-banner{
+    height:90vh;
+    background:url('https://images.pexels.com/photos/26954166/pexels-photo-26954166/free-photo-of-luxury-black-car-in-garage.jpeg') center/cover no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+}
+
+.hero-overlay{
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.6);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+
+.hero-overlay h1{
+    font-size:70px;
+    margin-bottom:20px;
+}
+
+.hero-overlay p{
+    font-size:28px;
+    margin-bottom:35px;
+}
+
+.hero-btn{
+    background:#007bff;
+    color:white;
+    border:none;
+    padding:16px 35px;
+    border-radius:8px;
+    font-size:20px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.hero-btn:hover{
+    transform:scale(1.08);
+}
+
+/* FEATURED VEHICLES */
+
+.featured-section{
+    padding:80px 60px;
+    text-align:center;
+}
+
+.featured-section h1{
+    font-size:55px;
+    margin-bottom:50px;
+}
+
+.featured-container{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:35px;
+}
+
+.featured-card{
+    width:350px;
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 4px 12px rgba(0,0,0,0.15);
+    transition:0.3s;
+}
+
+.featured-card:hover{
+    transform:translateY(-10px);
+}
+
+.featured-image{
+    width:100%;
+    height:240px;
+    object-fit:cover;
+}
+
+.featured-card h2{
+    margin-top:20px;
+    font-size:30px;
+}
+
+.featured-card p{
+    padding:20px;
+    color:#555;
+    font-size:18px;
+}
+
+/* RENT PAGE */
+
+.rent-page{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:85vh;
+    padding:40px;
+}
+
+.rent-box{
+    width:450px;
+    background:white;
+    padding:40px;
+    border-radius:15px;
+    box-shadow:0 6px 15px rgba(0,0,0,0.15);
+}
+
+.rent-box h1{
+    text-align:center;
+    margin-bottom:15px;
+    font-size:40px;
+}
+
+.rent-box p{
+    text-align:center;
+    color:#666;
+    margin-bottom:30px;
+}
+
+.rent-box form{
+    display:flex;
+    flex-direction:column;
+}
+
+.rent-box label{
+    margin-bottom:8px;
+    margin-top:15px;
+    font-size:18px;
+    font-weight:bold;
+}
+
+.rent-box input{
+    padding:14px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:16px;
+}
+
+.rent-box button{
+    margin-top:30px;
+    background:#000814;
+    color:white;
+    border:none;
+    padding:15px;
+    border-radius:8px;
+    font-size:18px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.rent-box button:hover{
+    transform:scale(1.03);
+    background:#001d3d;
+}
+
+/* SUCCESS PAGE */
+
+.success-page{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:85vh;
+    padding:40px;
+}
+
+.success-box{
+    width:550px;
+    background:white;
+    padding:45px;
+    border-radius:18px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.15);
+    text-align:center;
+}
+
+.success-icon{
+    width:90px;
+    height:90px;
+    background:#28a745;
+    color:white;
+    font-size:50px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:auto;
+    margin-bottom:25px;
+}
+
+.success-box h1{
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.success-text{
+    color:#666;
+    font-size:20px;
+    margin-bottom:35px;
+}
+
+/* BOOKING DETAILS */
+
+.booking-details{
+    background:#f5f5f5;
+    padding:25px;
+    border-radius:12px;
+    margin-bottom:30px;
+}
+
+.detail-row{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:18px;
+    font-size:20px;
+}
+
+.detail-row:last-child{
+    margin-bottom:0;
+    font-weight:bold;
+}
+
+/* SUPPORT BOX */
+
+.support-box{
+    background:#000814;
+    color:white;
+    padding:25px;
+    border-radius:12px;
+    margin-bottom:30px;
+}
+
+.support-box h3{
+    margin-bottom:15px;
+    font-size:28px;
+}
+
+.support-box p{
+    margin-bottom:10px;
+    font-size:18px;
+}
+
+/* BUTTON */
+
+.home-btn{
+    background:#007bff;
+    color:white;
+    border:none;
+    padding:15px 35px;
+    border-radius:8px;
+    font-size:18px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.home-btn:hover{
+    transform:scale(1.05);
+}
+
+/* SUCCESS ANIMATION */
+
+.success-box{
+    animation:popup 0.8s ease;
+}
+
+.success-icon{
+    animation:tickpop 1s ease;
+}
+
+@keyframes popup{
+
+    0%{
+        opacity:0;
+        transform:scale(0.7);
+    }
+
+    100%{
+        opacity:1;
+        transform:scale(1);
+    }
+
+}
+
+@keyframes tickpop{
+
+    0%{
+        transform:scale(0);
+    }
+
+    60%{
+        transform:scale(1.2);
+    }
+
+    100%{
+        transform:scale(1);
+    }
+
+}
+
+/* RENT PAGE BACKGROUND */
+
+.rent-page{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:85vh;
+    padding:40px;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.6),
+    rgba(0,0,0,0.6)),
+    url('https://images.unsplash.com/photo-1503376780353-7e6692767b70');
+
+    background-size:cover;
+    background-position:center;
+}
+
+/* SUCCESS PAGE BACKGROUND */
+
+.success-page{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:85vh;
+    padding:40px;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.6),
+    rgba(0,0,0,0.6)),
+    url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7');
+
+    background-size:cover;
+    background-position:center;
+}
+
+/* LOGIN & SIGNUP */
+
+.auth-page{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.6),
+    rgba(0,0,0,0.6)),
+    url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7');
+
+    background-size:cover;
+    background-position:center;
+}
+
+.auth-box{
+    width:400px;
+    background:white;
+    padding:40px;
+    border-radius:15px;
+    box-shadow:0 6px 15px rgba(0,0,0,0.2);
+    text-align:center;
+}
+
+.auth-box h1{
+    margin-bottom:30px;
+    font-size:40px;
+}
+
+.auth-box form{
+    display:flex;
+    flex-direction:column;
+}
+
+.auth-box input{
+    margin-bottom:18px;
+    padding:14px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:16px;
+}
+
+.auth-box button{
+    background:#000814;
+    color:white;
+    border:none;
+    padding:15px;
+    border-radius:8px;
+    font-size:18px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.auth-box button:hover{
+    transform:scale(1.03);
+}
+
+.auth-box p{
+    margin-top:20px;
+}
+
+.auth-box a{
+    text-decoration:none;
+    color:#007bff;
+}
+
+/* USERNAME */
+
+.welcome-user{
+    font-size:18px;
+    font-weight:bold;
+    margin-right:15px;
+}
+/* SIGNUP ERROR */
+
+.error-message{
+    color:red;
+    margin-bottom:20px;
+    font-size:16px;
+    font-weight:bold;
+}

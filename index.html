@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ shop_name }}</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+   <!-- NAVBAR -->
+
+<div class="navbar">
+
+    <div class="logo">
+        Parth Garage
+    </div>
+
+    <div class="nav-links">
+
+        <a href="/">Home</a>
+
+        <!-- VEHICLES DROPDOWN -->
+
+     <div class="dropdown">
+
+    <button class="dropbtn">Vehicles</button>
+
+     <div class="dropdown-content">
+
+                <a href="/category/SUV">SUV</a>
+
+                <a href="/category/Sedan">Sedan</a>
+
+                <a href="/category/Bike">Bike</a>
+
+                <a href="/category/Scooty">Scooty</a>
+
+                <a href="/category/Luxury Cars">Luxury Cars</a>
+
+            </div>
+
+        </div>
+
+        <a href="/#about">About Us</a>
+
+        <a href="/#services">Services</a>
+
+        <a href="/#contact">Contact</a>
+
+    </div>
+
+<div class="login-btn">
+
+    {% if username %}
+
+        <span class="welcome-user">
+            Welcome, {{ username }}
+        </span>
+
+        <a href="/logout">
+            <button>Logout</button>
+        </a>
+
+    {% else %}
+
+        <a href="/login">
+            <button>Login / Sign Up</button>
+        </a>
+
+    {% endif %}
+
+</div>
+
+</div>
+
+<!-- HERO BANNER -->
+
+<section class="hero-banner">
+
+    <div class="hero-overlay">
+
+        <h1>Drive Your Dream Vehicle Today</h1>
+
+        <p>
+            Premium SUVs, Sedans, Bikes & Luxury Cars Available For Rent
+        </p>
+
+        <a href="#categories">
+            <button class="hero-btn">
+                Explore Vehicles
+            </button>
+        </a>
+
+    </div>
+
+</section>
+
+
+    <!-- TITLE -->
+
+    <div class="main-title">
+
+        <h1>Our Vehicle Categories</h1>
+
+        <p>
+            Choose from a wide range of vehicles to suit your needs
+        </p>
+
+    </div>
+
+
+</section>
+    <!-- CATEGORY CARDS -->
+
+    <div class="category-menu" id="categories">
+
+    {% for category in category_names %}
+
+    <div class="category-box">
+
+        <h2>{{ category }}</h2>
+
+        {% if category == 'SUV' %}
+
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOVKdO4XPe8SKN8kuzwhL-1QGa3W-P16SE_xzyOzM0pmKtgpit3Cd-Ux8&s=10"
+             class="category-image">
+
+        {% elif category == 'Sedan' %}
+
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJKeDVxOzo1N5hwYyVkVfMMmLfOwNpe9X1CfD60Zuwsg&s=10"
+             class="category-image">
+
+        {% elif category == 'Bike' %}
+
+        <img src="https://iamabiker.com/wp-content/uploads/2026/02/Custom-modified-Continental-GT-650-by-Neev-Motorcycles.jpg"
+             class="category-image">
+
+        {% elif category == 'Scooty' %}
+
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7BabnooyNASCgi-5_n6VgMIafQUZu7iJeP-htaUr7KdzVr3CCkfX_qjhv&s=10"
+             class="category-image">
+
+        {% elif category == 'Luxury Cars' %}
+
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaotRBvI-ic2ew2vtGhys_czsUyjZaJUBEXeryLnkSfycicbOtJPtGqqJN&s=10"
+             class="category-image">
+
+        {% endif %}
+
+        <a href="/category/{{ category }}">
+            <button>
+                View {{ category }}
+            </button>
+        </a>
+
+    </div>
+
+    {% endfor %}
+
+</div>
+
+<!-- ABOUT US -->
+
+<section class="info-section" id="about">
+
+    <h1>About Us</h1>
+
+    <p>
+        Parth Garage is a trusted premium vehicle rental platform
+        offering SUVs, sedans, bikes, scooties and luxury cars
+        at affordable prices. We provide clean vehicles,
+        easy booking and customer-friendly services for
+        daily travel, vacations and special events.
+    </p>
+
+</section>
+
+<!-- SERVICES -->
+
+<section class="info-section" id="services">
+
+    <h1>Our Services</h1>
+
+    <div class="services-container">
+
+        <div class="service-card">
+
+            <h2>Daily Rentals</h2>
+
+            <p>
+                Affordable rental plans for everyday travel.
+            </p>
+
+        </div>
+
+        <div class="service-card">
+
+            <h2>Luxury Cars</h2>
+
+            <p>
+                Premium luxury vehicles for weddings , events and travel.
+            </p>
+
+        </div>
+
+        <div class="service-card">
+
+            <h2>24/7 Support</h2>
+
+            <p>
+                Customer support available anytime for help.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CONTACT US -->
+
+<section class="info-section" id="contact">
+
+    <h1>Contact Us</h1>
+
+    <div class="contact-box">
+
+        <p>
+            <strong>Phone:</strong>
+            +91 9876543210
+        </p>
+
+        <p>
+            <strong>Email:</strong>
+            parthgarage@gmail.com
+        </p>
+
+        <p>
+            <strong>Address:</strong>
+            Jorhat, Assam
+            India
+        </p>
+
+    </div>
+
+</section>
+
+
+    <!-- FOOTER -->
+
+    <div class="footer">
+
+        <div>
+            © 2026 Parth Garage. All rights reserved.
+        </div>
+
+        <div>
+            Privacy Policy |
+            Terms & Conditions
+        </div>
+
+    </div>
+
+</body>
+</html>
